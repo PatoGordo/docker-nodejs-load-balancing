@@ -1,0 +1,44 @@
+version: "3"
+services:
+  app1:
+    build:
+      context: ./containers/app/app1
+    ports:
+      - "5001:5000"
+  app2:
+    build:
+      context: ./containers/app/app2
+    ports:
+      - "5002:5000"
+  app3:
+    build:
+      context: ./containers/app/app3
+    ports:
+      - "5003:5000"
+  app4:
+    build:
+      context: ./containers/app/app4
+    ports:
+      - "5004:5000"
+  app5:
+    build:
+      context: ./containers/app/app5
+    ports:
+      - "5005:5000"
+  app6:
+    build:
+      context: ./containers/app/app6
+    ports:
+      - "5006:5000"
+  nginx:
+    build:
+      context: "./containers/nginx"
+    ports:
+      - "8080:80"
+    depends_on:
+      - app1  
+      - app2
+      - app3
+      - app4
+      - app5
+      - app6

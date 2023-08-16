@@ -1,0 +1,12 @@
+{
+  "name": "app3",
+  "version": "1.0.0",
+  "description": "Node.js App 3",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
